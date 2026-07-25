@@ -8,7 +8,7 @@ services:
     networks:
       - mynetwork
 
-  auth:
+  auth_service:
     image: manikanta1106/pyapp:auth_image
     deploy:
       replicas: 1
@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
 
-  book:
+  book_service:
     image: manikanta1106/pyapp:book_image
     deploy:
       replicas: 1
@@ -30,7 +30,7 @@ services:
     depends-on:
       - db
 
-  borrow:
+  borrow_service:
     image: manikanta1106/pyapp:borrow_image
     deploy:
       replicas: 1
